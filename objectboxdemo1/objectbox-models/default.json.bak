@@ -1,0 +1,169 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:1038949184483383217",
+      "lastPropertyId": "6:5514908857630629854",
+      "name": "Teacher",
+      "properties": [
+        {
+          "id": "1:5510785447080403928",
+          "name": "id"
+        },
+        {
+          "id": "2:6732406101133275169",
+          "indexId": "1:7447785384032719962",
+          "name": "serverId"
+        },
+        {
+          "id": "3:1789768645453146200",
+          "name": "name"
+        },
+        {
+          "id": "4:8742312531080342637",
+          "name": "age"
+        },
+        {
+          "id": "5:4380276205130266758",
+          "name": "isMale"
+        },
+        {
+          "id": "6:5514908857630629854",
+          "name": "lesson"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:725558894800405346",
+      "lastPropertyId": "4:3253580724172024045",
+      "name": "Person",
+      "properties": [
+        {
+          "id": "1:8226766448360872711",
+          "name": "id"
+        },
+        {
+          "id": "2:3572235835201192545",
+          "name": "name"
+        },
+        {
+          "id": "3:3080023920812101243",
+          "name": "age"
+        },
+        {
+          "id": "4:3253580724172024045",
+          "indexId": "2:2933516997021164976",
+          "name": "petId"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:1069074916152733628",
+      "lastPropertyId": "4:817514973291158177",
+      "name": "Pet",
+      "properties": [
+        {
+          "id": "1:8517946459528914341",
+          "name": "id"
+        },
+        {
+          "id": "2:4652509462447170673",
+          "name": "type"
+        },
+        {
+          "id": "3:8349149185582535814",
+          "name": "name"
+        },
+        {
+          "id": "4:817514973291158177",
+          "name": "age"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:6257161918002350885",
+      "lastPropertyId": "2:2093906297996407579",
+      "name": "Customer",
+      "properties": [
+        {
+          "id": "1:8577918598441044056",
+          "name": "id"
+        },
+        {
+          "id": "2:2093906297996407579",
+          "name": "name"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "5:8903998484354599881",
+      "lastPropertyId": "3:2586931238718789469",
+      "name": "Order",
+      "properties": [
+        {
+          "id": "1:4624241407492149533",
+          "name": "id"
+        },
+        {
+          "id": "2:8016241219207938595",
+          "name": "goodName"
+        },
+        {
+          "id": "3:2586931238718789469",
+          "indexId": "3:7988473611533045746",
+          "name": "customerId"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "6:6077369892606433278",
+      "lastPropertyId": "6:7093812212759619293",
+      "name": "Fruit",
+      "properties": [
+        {
+          "id": "1:8247406888161986503",
+          "name": "id"
+        },
+        {
+          "id": "2:2370873250369410679",
+          "name": "type"
+        },
+        {
+          "id": "4:6917135703708256431",
+          "name": "cost"
+        },
+        {
+          "id": "6:7093812212759619293",
+          "name": "age"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "6:6077369892606433278",
+  "lastIndexId": "3:7988473611533045746",
+  "lastRelationId": "1:1400197208106062321",
+  "lastSequenceId": "0:0",
+  "modelVersion": 4,
+  "modelVersionParserMinimum": 4,
+  "newUidPool": [
+    4567188486560682928
+  ],
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [
+    6177810396162367663,
+    5743654684556403259
+  ],
+  "retiredRelationUids": [
+    1400197208106062321
+  ],
+  "version": 1
+}

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".QueriesActivity"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="query"
+            android:orientation="vertical"
+            android:background="@drawable/shape_red_stroke"
+            style="@style/queriesStyle">
+
+            <Button
+                android:id="@+id/btn_query"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="query"/>
+
+            <com.matthewz.objectboxdemo1.widget.MeasureListView
+                android:id="@+id/listView_squery"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></com.matthewz.objectboxdemo1.widget.MeasureListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:contentDescription="add"
+            android:background="@drawable/shape_blue_stroke"
+            style="@style/queriesStyle">
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="姓名"/>
+
+            <EditText
+                android:id="@+id/et_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="年龄"
+                android:inputType="number"/>
+
+            <RadioGroup
+                android:id="@+id/rg_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="男"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:id="@+id/rb_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="女"/>
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/et_course"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="任课"/>
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="add"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="delete"
+            android:orientation="vertical"
+            android:background="@drawable/shape_green_stroke"
+            style="@style/queriesStyle">
+
+            <EditText
+                android:id="@+id/et_delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="删除的id"/>
+
+            <TextView
+                android:id="@+id/tv_delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="delete"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="modify"
+            android:orientation="vertical"
+            style="@style/queriesStyle">
+
+            <EditText
+                android:id="@+id/et_query_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="查询id"
+                android:inputType="number"/>
+
+            <Button
+                android:id="@+id/btn_modify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="modify"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

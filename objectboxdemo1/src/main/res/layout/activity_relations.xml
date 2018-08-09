@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.matthewz.objectboxdemo1.entity.Customer" />
+        <import type="java.util.List" />
+
+        <variable
+            name="personName"
+            type="android.databinding.ObservableField&lt;String&gt;" />
+
+        <variable
+            name="petName"
+            type="android.databinding.ObservableField&lt;String&gt;" />
+
+        <variable
+            name="unbindId"
+            type="android.databinding.ObservableField&lt;String&gt;" />
+
+        <variable
+            name="customerLiveData"
+            type="io.objectbox.android.ObjectBoxLiveData&lt;Customer&gt;" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RelationsActivity">
+
+        <EditText
+            android:id="@+id/et_person_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:hint="主人姓名"
+            android:text="@={personName.get()}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_pet_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_person_name"
+            android:hint="宠物姓名"
+            android:text="@={petName.get()}"/>
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="add"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_pet_name" />
+
+        <Button
+            android:id="@+id/btn_query"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:text="query"
+            app:layout_constraintStart_toEndOf="@+id/btn_add"
+            app:layout_constraintTop_toTopOf="@+id/btn_add" />
+
+        <EditText
+            android:id="@+id/et_unbind_person_id"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:hint="请输入要解除关系的主人id"
+            android:inputType="number"
+            android:text="@={unbindId.get()}"
+            app:layout_constraintTop_toBottomOf="@id/btn_query" />
+
+        <Button
+            android:id="@+id/btn_unbind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:text="unbind"
+            app:layout_constraintStart_toEndOf="@+id/btn_query"
+            app:layout_constraintTop_toTopOf="@+id/btn_query" />
+
+        <Button
+            android:id="@+id/btn_query_pet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Query pet on log"
+            app:layout_constraintStart_toEndOf="@+id/btn_unbind"
+            app:layout_constraintTop_toTopOf="@+id/btn_unbind" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/holo_blue_dark"
+            app:layout_constraintTop_toBottomOf="@id/et_unbind_person_id"
+            android:layout_margin="5dp"/>
+
+        <TextView
+            android:id="@+id/tv_one_2_many_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="一对多"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_unbind_person_id"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:id="@+id/btn_add_customer_and_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:text="add a customer with orders"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_one_2_many_label" />
+
+        <Button
+            android:id="@+id/btn_query_customer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="query Customer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_add_customer_and_order" />
+
+        <EditText
+            android:id="@+id/et_drop_your_first_order_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="input your customer id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_query_customer"
+            android:inputType="number"/>
+
+        <Button
+            android:id="@+id/btn_drop_your_first_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="query Customer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_unbind_person_id" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@{String.valueOf(customerLiveData.getValue().size())}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="30sp"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

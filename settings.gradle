@@ -1,1 +1,1 @@
-include ':app', ':databindingdemo1'
+include ':app', ':databindingdemo1', ':objectboxdemo1', ':mvvmdemo1', ':aidlserver', ':aidlclient'
