@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/add_main" android:title="添加" app:showAsAction="always"/>
+    <item android:id="@+id/clear_main" android:title="清除所有" app:showAsAction="always"/>
+    <item android:id="@+id/manage_main" android:title="管理" app:showAsAction="always" />
+</menu>
