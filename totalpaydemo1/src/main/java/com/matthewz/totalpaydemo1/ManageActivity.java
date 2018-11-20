@@ -104,8 +104,7 @@ public class ManageActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        LinkedHashSet<String> set = new LinkedHashSet<>(mAllGoods);
-        ShareUtil.getInstance().saveGoods(set);
+        ShareUtil.getInstance().saveGoods(mAllGoods);
         Toast.makeText(this, "保存完毕", Toast.LENGTH_SHORT).show();
 
         super.onBackPressed();

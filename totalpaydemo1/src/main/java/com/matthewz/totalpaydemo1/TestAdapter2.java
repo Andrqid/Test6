@@ -26,7 +26,7 @@ public class TestAdapter2 extends BaseMultiItemQuickAdapter<NewMutableLiveData, 
     private AppCompatActivity mActivity;
     private MainViewModel mViewModel;
 
-    private SimpleDateFormat mFormat = new SimpleDateFormat("yyyy年MM月dd日");
+    private SimpleDateFormat mFormat = new SimpleDateFormat("yyyy年 MM月 dd日");
     /**
      * Same as QuickAdapter#QuickAdapter(Context,int) but with
      * some initialization data.
@@ -75,8 +75,8 @@ public class TestAdapter2 extends BaseMultiItemQuickAdapter<NewMutableLiveData, 
                 }
                 break;
             case MAIN_TYPE_TAIL:
-                helper.setText(R.id.tv_total, mViewModel.calculateTotal());
-                helper.setText(R.id.tv_time, "当前日期为：" + mFormat.format(new Date()));
+                helper.setText(R.id.tv_total, "总计：" + mViewModel.calculateTotal());
+                helper.setText(R.id.tv_time, "当前日期：" + mFormat.format(new Date()));
                 break;
         }
     }
