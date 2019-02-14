@@ -1,4 +1,4 @@
-//package com.matthewz.totalpaydemo1;
+package com.matthewz.totalpaydemo1;//package com.matthewz.totalpaydemo1;
 //
 //import android.databinding.BindingAdapter;
 //import android.databinding.InverseBindingAdapter;

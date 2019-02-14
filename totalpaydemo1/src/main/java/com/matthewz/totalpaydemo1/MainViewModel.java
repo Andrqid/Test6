@@ -30,7 +30,7 @@ public class MainViewModel extends ViewModel {
     }
 
     private void getAllGoods() {
-        Set<String> goods = ShareUtil.getInstance().getGoods();
+        List<String> goods = ShareUtil.getInstance().getGoods();
         if(null != goods) {
             mAllGoodsList.clear();
             mAllGoodsList.addAll(goods);
