@@ -42,6 +42,9 @@ public class TestAdapter2 extends BaseMultiItemQuickAdapter<NewMutableLiveData, 
         addItemType(MAIN_TYPE_TITLE, R.layout.l_title_main);
         addItemType(MAIN_TYPE_CONTENT, R.layout.l_item_main_2);
         addItemType(MAIN_TYPE_TAIL, R.layout.l_tail_main_2);
+
+        String[][][] sArr = new String[4][][];
+//        sArr[0] = new int[3];
     }
 
     @Override

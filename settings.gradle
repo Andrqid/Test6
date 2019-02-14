@@ -1,1 +1,1 @@
-include ':app', ':databindingdemo1', ':objectboxdemo1', ':mvvmdemo1', ':aidlserver', ':aidlclient', ':brvah', ':totalpaydemo1'
+include ':app', ':databindingdemo1', ':objectboxdemo1', ':mvvmdemo1', ':aidlserver', ':aidlclient', ':brvah', ':totalpaydemo1', ':threaddemo1', ':animationdrawabledemo1', ':keyboarddemo2', ':singleinstancedemo1', ':shareuiddemo1', ':shareuiddemo2', ':contentproviderdemo1', ':viewdemo1'

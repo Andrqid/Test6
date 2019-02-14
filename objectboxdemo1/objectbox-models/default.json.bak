@@ -125,7 +125,7 @@
     {
       "id": "6:6077369892606433278",
       "lastPropertyId": "6:7093812212759619293",
-      "name": "Fruit",
+      "name": "Fruitage",
       "properties": [
         {
           "id": "1:8247406888161986503",
@@ -153,9 +153,6 @@
   "lastSequenceId": "0:0",
   "modelVersion": 4,
   "modelVersionParserMinimum": 4,
-  "newUidPool": [
-    4567188486560682928
-  ],
   "retiredEntityUids": [],
   "retiredIndexUids": [],
   "retiredPropertyUids": [

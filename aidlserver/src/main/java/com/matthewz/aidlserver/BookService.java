@@ -10,10 +10,12 @@ import android.os.RemoteException;
 import android.os.SystemClock;
 import android.support.annotation.Nullable;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.matthewz.aidlserver.aidl.Book;
 import com.matthewz.aidlserver.aidl.IBookManager;
 import com.matthewz.aidlserver.aidl.INewBookNotify;
+import com.matthewz.aidlserver.aidl.ITest;
 
 import java.util.List;
 import java.util.Random;
@@ -52,6 +54,16 @@ public class BookService extends Service{
             int i = mCallbackList.beginBroadcast();
             Log.e(TAG, "unregisterNewBookNotify callback size : " + i);
             mCallbackList.finishBroadcast();
+        }
+
+        @Override
+        public IBinder getMyTestBinder() throws RemoteException {
+            return new ITest.Stub() {
+                @Override
+                public void justDoIt(String msg) throws RemoteException {
+                    Toast.makeText(BookService.this, msg, Toast.LENGTH_LONG).show();
+                }
+            };
         }
     };
 

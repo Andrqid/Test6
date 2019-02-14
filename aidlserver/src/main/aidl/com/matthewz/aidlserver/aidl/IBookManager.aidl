@@ -12,4 +12,6 @@ interface IBookManager {
     void registerNewBookNotify(INewBookNotify notify);
 
     void unregisterNewBookNotify(INewBookNotify notify);
+
+    IBinder getMyTestBinder();
 }

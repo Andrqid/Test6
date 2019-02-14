@@ -19,7 +19,6 @@ public class AActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a);
-
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             String transition = getIntent().getStringExtra("transition");
             ViewGroup content = findViewById(android.R.id.content);

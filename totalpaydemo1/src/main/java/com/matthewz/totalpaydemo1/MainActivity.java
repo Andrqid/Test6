@@ -13,15 +13,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.matthewz.totalpaydemo1.databinding.ActivityMainBinding;
-
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,7 +38,13 @@ public class MainActivity extends AppCompatActivity {
         mBinding.setLifecycleOwner(this);
 
         mViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
-
+        short s1 = 2;
+        s1 += 100;
+        s1 = (short) (s1 + 100);
+        byte b1 = 100;
+        b1 += 50;
+//        b1 = b1 + 50;
+        b1 %= 20;
         mRv = findViewById(R.id.rv_main);
         mRv.setLayoutManager(new LinearLayoutManager(this));
         mAdapter = new TestAdapter2(this, mViewModel.mGoodInChosen, mViewModel);
@@ -148,9 +151,20 @@ public class MainActivity extends AppCompatActivity {
                         .setNegativeButton("取消", null)
                         .create()
                         .show();
+//                int i = 12 *13;
+//                short s1 = 12;
+//                short s2 = 13;
+//                short s3 = s1 * s2;
+                 short s1  =12;
+                 float f1  = 2.5f;
+                 byte b = 1;
+//                 b = b * s1;
+                 long l = 1L;
+//                 b = b * l;
+                 char c = 100;
+//                 c = c + 1L;
                 break;
         }
-
         return super.onOptionsItemSelected(item);
     }
 

@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.matthewz.aidlserver.aidl.Book;
 import com.matthewz.aidlserver.aidl.IBookManager;
 import com.matthewz.aidlserver.aidl.INewBookNotify;
+import com.matthewz.aidlserver.aidl.ITest;
 
 import java.util.List;
 
@@ -132,5 +133,19 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean isServiceBinded() {
         return mBookManager != null;
+    }
+
+    public void showToastFromServer(View view) {
+        if(null != mBookManager) {
+            try {
+                IBinder myTestBinder = mBookManager.getMyTestBinder();
+                ITest.Stub.asInterface(myTestBinder).justDoIt("hahahahah");
+            } catch (RemoteException e) {
+                Toast.makeText(this, "exception catch", Toast.LENGTH_SHORT).show();
+                e.printStackTrace();
+            }
+        } else  {
+            Toast.makeText(this, "mBookManager is null", Toast.LENGTH_SHORT).show();
+        }
     }
 }
