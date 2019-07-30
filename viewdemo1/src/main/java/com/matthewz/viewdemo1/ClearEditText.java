@@ -158,10 +158,10 @@ public class ClearEditText extends android.support.v7.widget.AppCompatEditText {
         super.onLayout(changed, left, top, right, bottom);
 
         if(null == mClearDrawable) {
-            mClearDrawable = getClearDrawable2(false);
+            mClearDrawable = getClearDrawable(false);
             setClearDrawable(mClearDrawable);
 
-            mClearDrawablePressed = getClearDrawable2(true);
+            mClearDrawablePressed = getClearDrawable(true);
         }
 
     }

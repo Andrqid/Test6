@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ClearEditActivity">
+    tools:context=".ClearEditActivity"
+    android:clipChildren="false">
 
 
     <com.matthewz.viewdemo1.ClearEditText
@@ -20,4 +21,33 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:text="abc"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_common_view_bg"
+            android:clickable="true"/>
+
+        <com.matthewz.viewdemo1.BottomCenterBulgeLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:clickable="true">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="ojbk"
+                android:gravity="center"
+                android:layout_gravity="bottom"
+                android:background="@drawable/selector_circle_bg"
+                android:clickable="true"/>
+        </com.matthewz.viewdemo1.BottomCenterBulgeLinearLayout>
+    </FrameLayout>
 </LinearLayout>
