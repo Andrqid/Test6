@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NestedScrollDemo1</string>
+
+    <string-array name="tabsName">
+        <item>时政</item>
+        <item>财经</item>
+        <item>体育</item>
+        <item>娱乐</item>
+        <item>科技</item>
+    </string-array>
+</resources>
